@@ -1,0 +1,125 @@
+/* .memberPage{
+  background: url("./src/imageFolder/field.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+  height: 100vh;
+  padding-top: 125px;
+} */
+
+.memberContainer {
+  display: flex;
+  margin: 5px;
+  box-shadow: 1px 1px 10px 0 rgb(13, 13, 13, 0.1);	
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.tabs div {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0s;
+  border: 1px solid #ccc;
+  position: relative; 
+}
+
+.tabs div::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  inset: 0;
+  filter: blur(10px);
+  margin: -50px; 
+  opacity: 0.9;
+}
+
+.activeTab {
+  background-color: teal;
+  color: white;
+  border-bottom: 2px solid darkcyan;
+}
+
+.inactiveTab {
+  background-color: rgba(211, 211, 211, 0.5); 
+  color: black;
+  position: relative; 
+}
+
+.inactiveTab::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  inset: 0;
+  filter: blur(10px);
+  margin: -10px; 
+  opacity: 0.5; 
+}
+
+.tabContent {
+  padding: 20px;
+  background-color: rgba(211, 211, 211, 0.5); 
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  outline: none;
+  position: relative; 
+}
+
+.tabContent::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  inset: 0;
+  filter: blur(20px);
+  margin: 20px; 
+  opacity: 0.95; 
+}
+
+
+.tabContent h2 {
+  margin-top: 0;
+}
+
+.nextButton {
+  background-color: lightcoral;
+  border-radius: 20px;
+  border: none;
+  color: #181616; 
+  padding: 10px 20px; 
+  margin-top: 50px; /* Adjust this value to move the button further down */
+  font-size: 16px; 
+  cursor: pointer;
+  outline: none;
+  vertical-align: center;
+}
+
+.nextButton::after {
+  content: '\2192'; 
+  margin-left: 5px; 
+}
+
+
+.memberContainer .contentImage{
+  width: 25%;
+  height: 100px;
+  display: block;
+  float: left
+}

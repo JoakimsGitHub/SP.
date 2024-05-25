@@ -1,0 +1,10 @@
+
+.home img{
+  float: left;
+  overflow: hidden;
+  vertical-align: 10%
+}
+
+.home p{
+  text-align: center;
+}
