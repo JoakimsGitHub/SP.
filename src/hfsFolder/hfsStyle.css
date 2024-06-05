@@ -1,0 +1,108 @@
+/* headerFooterStyle.css */
+
+header {
+  position: fixed; /* Fix the header to the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the header spans the entire width of the viewport */
+  z-index: 1000; /* Set a high z-index to ensure the header appears above other content */
+}
+
+:root {
+  --header-height: 20vh; /* Default header height */
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --header-height: 30vh; /* Adjust header height for larger screens */
+  }
+}
+
+main {
+  position: relative; /* Set position to relative to allow top positioning */
+  top: var(--header-height); /* Add space for the fixed header */
+}
+
+.header-top {
+  width: 100vw; /* Cover the entire width of the viewport */
+  height: var(--header-height); /* Use CSS variable for height */
+  background-image: url("./hfsImages/logoCompany.png"); /* The company name, logo, and tagline */
+  background-size: cover; /* Ensure background covers the entire area */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  background-position: center; /* Center the background image */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.header-top h1 {
+  color: #575658;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0; /* Remove margin from heading */
+  transition: transform 0.15s ease-in-out, color 0.1s ease-in-out; /* Transition for animation */
+}
+
+header nav {
+  width: 100%; /* Ensure nav takes full width */
+  border-radius: 0px;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 20px; /* Add padding to nav */
+  background: linear-gradient(to bottom, hsl(96, 57%, 29%), hsl(94, 45%, 35%), hsl(96, 71%, 20%)); 
+}
+
+header button {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background-color: hsl(97, 20%, 95%);
+  color: hsl(97, 20%, 15%);
+  padding: 10px 20px;
+  margin: 1px;
+  border-radius: 10%;
+  border: none;
+  text-shadow: 0px 0px 1px black;
+  transition: transform 0.5s ease-in-out, color 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: hsl(97, 20%, 85%);
+  color: #1f1f1f; /* Change color on hover */
+  transform: scale(1.025); /* Scale up on hover */
+}
+
+header .active-tab {
+  background-color: hsl(96, 48%, 78%);
+  color: #1f1f1f; /* Change color on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Footer styles */
+
+.footer {
+  font-size: 16px;
+}
+
+.links-contact {
+  display: flex;
+  justify-content: space-between; /* Ensure equal spacing between elements */
+}
+
+.external-links a {
+  display: inline-flex;
+  margin: 5px;
+}
+
+.contact-info {
+   display: inline-flex;
+  margin: 5px; /* Add some margin between elements */
+}
+
+.presentation{
+  display: flex;
+  flex-direction: left;
+  
+}

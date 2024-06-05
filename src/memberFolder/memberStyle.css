@@ -1,0 +1,84 @@
+/* Base styles */
+.memberPage .memberContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin: 5px;
+  box-shadow: 1px 1px 10px 0 rgba(13, 13, 13, 0.1);  
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.memberPage .memberContainer img.contentImage {
+  display: block;
+  width: 100%; /* Adjust image width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add margin to separate text and image */
+  max-width: 100%; /* Set maximum width for the image */
+  position: relative; /* Ensure image does not overlap other elements */
+  z-index: 1; /* Ensure image is below other elements */
+}
+
+.memberPage .memberContainer p {
+  font-size: 1em;
+  color: #555; /* Darker color for better readability */
+}
+
+.memberPage .memberContainer:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.memberPage .activeTab, .memberPage .inactiveTab {
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.memberPage .activeTab {
+  color: red; /* Color for active tab */
+  background-color: greenyellow;
+}
+
+.memberPage .inactiveTab {
+  color: black; /* Color for inactive tabs */
+  background-color: orangered;
+}
+
+.memberPage .activeTab:hover {
+  color: purple; /* Color for hover state of active tabs */
+}
+
+.memberPage .inactiveTab:hover {
+  color: blue; /* Color for hover state of inactive tabs */
+}
+
+.nextButton {
+  position: relative; /* Ensure the button is positioned relative to its container */
+  z-index: 2; /* Make sure the button is above other elements, such as images */
+  margin-top: 10px; /* Add some space between the image and the button */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .memberPage .memberContainer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .memberPage .memberContainer img.contentImage {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add margin below image for spacing */
+  }
+
+  .memberPage .activeTab, .memberPage .inactiveTab {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,71 @@
+
+:root {
+  /* Define primary color for buttons and accents in HSLA format */
+  --color-primary: hsla(150, 50%, 50%, 1); /* Hue: 150° (green), Saturation: 50%, Lightness: 50%, Alpha: 1 (fully opaque) */
+
+  /* Define secondary color for text and backgrounds in HSLA format */
+  --color-secondary: hsla(0, 0%, 100%, 1); /* Hue: 0° (red), Saturation: 0% (gray), Lightness: 100% (white), Alpha: 1 (fully opaque) */
+
+  /* Define common font stack for better rendering across devices */
+  --font-family: "Open Sans", Arial, sans-serif;
+
+  /* Define base font size for scaling text */
+  --base-font-size: 0.95rem; /* Equivalent to 14.25px */
+
+  /* Define font size for headings */
+  --heading-font-size: 2em; /* Relative to the base font size */
+
+  /* Define background overlay color in HSLA format */
+  --overlay-color: hsla(120, 70%, 60%, 0.55); /* Hue: 120° (green), Saturation: 70%, Lightness: 60%, Alpha: 0.55 (semi-transparent) */
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box; /* Ensure consistent box model */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0; /* Remove default margin */
+  font-family: var(--font-family); /* Apply root font family */
+  font-size: var(--base-font-size); /* Set base font size */
+  color: var(--color-secondary); /* Set text color to secondary */
+  background: none repeat scroll 0 0 var(--color-secondary); /* Set background color to secondary */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative; /* Set position relative to contain absolute positioned elements */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  -webkit-font-smoothing: antialiased; /* Improve font rendering on webkit browsers */
+}
+
+/* Background overlay */
+body::before {
+  content: ""; /* Create a pseudo-element */
+  position: fixed; /* Position the pseudo-element */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Cover the entire width of the viewport */
+  height: 100%; /* Cover the entire height of the viewport */
+  background-color: var(--overlay-color); /* Semi-transparent overlay */
+  z-index: -1; /* Ensure the overlay is behind other content */
+  backdrop-filter: blur(3px); /* Apply backdrop filter with blur */
+}
+
+/* Background image */
+body::after {
+  content: ""; /* Create a pseudo-element */
+  position: fixed; /* Position the pseudo-element */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100vw; /* Cover the entire width of the viewport */
+  height: 100vh; /* Cover the entire height of the viewport */
+  background-image: url("./src/imageFolder/field.jpg"); /* Background image */
+  background-size: cover; /* Ensure background covers the entire viewport */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  z-index: -2; /* Ensure the background image is behind the overlay */
+}
+
+

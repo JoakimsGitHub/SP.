@@ -1,0 +1,238 @@
+
+.card {
+  /* max-width: 1280px; */
+  /* width: auto;
+  height: auto; */
+  margin: 2px;
+  padding: 3px
+  text-align: center;
+  align-content: center;
+  display: inline-block;
+  border-radius: 3%;
+  width: 250px;
+  height: auto;
+  
+  
+  /* margin-left: auto;
+  margin-right: auto; */
+  background: linear-gradient(to bottom, hsl(55, 50%, 30%), hsl(55, 45%, 55%));
+}
+/* Styling by applying CSS rules to selected elements by targeting their parent element's attribute. */
+
+.card img {
+  width: 100%;
+  height: 200px;
+  /* Hue: color is degrees. Saturation: intensity in percentage. Lightness: brightness in percentage. Alpha: transparency (from opaque to transparent). */
+  border: 1px solid hsla(268, 100%, 32%, 0.1);
+  /* A 50% border radius makes it circular. */
+  border-radius: 1%;
+  /* box-shadow: 1px 1px 1px black; */
+  box-shadow: 0px 0px 1px black;
+}
+
+/* Every h2 and p that descend from the card class. */
+.card h1,
+.card h2,
+.card h3,
+.card h4{
+  font-family: "Libre Baskerville", sans-serif;
+  text-align: center;
+  color: green;
+}
+
+.card h1 {
+  font-size: 20px,
+}
+
+.card h2 {
+  font-size: 20px;
+}
+
+.card h3 {
+  font-size: 18px
+}
+
+.card h4 {
+  font-size: 16px
+}
+
+.card p {
+  text-align: center;
+  color: #22623e;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Playfair", serif;
+}
+
+.card button {
+  background-color: hsl(97, 20%, 75%);
+  color: black;
+  padding: 5px;
+  margin: 5px auto;
+  text-align: center; 
+  border-radius: 8px;
+  border: 1px solid black;
+  text-shadow: -1px 1px 1px #a9a2a2;
+  box-shadow: -1px 1px 2px black;
+  cursor: pointer;
+}
+
+
+.card #unapplicable,
+.card #unapplicable h2,
+.card #unapplicable p,
+.card #unapplicable img,
+.card #unapplicable button{
+  filter: grayscale(100%);
+  background: hsl(55, 0%, 55%)
+}
+
+/* Using a descendant combinator to target both the h2 and p element as descendants of the id and class. */
+.card #unavailable,
+.card #unavailable h2,
+.card #unavailable p,
+.card #unavailable img,
+.card #unavailable button{
+  filter: grayscale(50%);
+  background: hsl(54, 25%, 59%)
+}
+
+/* Using a pseudo-class selector: keywords added to selectors that specify a special state of the selected elements. */
+.card button:hover {
+  background-color: hsl(97, 20%, 85%);
+}
+
+.grid{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 200px 200px;
+  gap: 30px
+}
+
+/* .card #basketball {
+  background-color: rgb(56, 231, 46);
+  justify-content: left;
+} */
+
+/* Descendant combination: selects a descendant no matter how deep the generation is. */
+/* .card #football {
+  background-color: rgb(53, 19, 139);
+  justify-content: right;
+}
+/* Child combination: selects a direct child element that is a descendat one generation deep. */
+/* .card > #handball {
+  background-color: rgb(53, 19, 139);
+  justify-content: right;
+} */
+
+/* Chaining selector. */
+/* li.done{
+  color: seagreen;
+} */
+
+/* Combining combiners.
+selector selectorselector{
+  font-size: 2rem;
+}
+ */
+
+
+
+
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/* Attribute selector: targets every element type that has a specific attribute. */
+
+
+/* Resets */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus-visible {
+  outline: 3px dashed #228bec;
+  outline-offset: 0;
+}
+html {
+  font: 62.5% / 1.15 sans-serif;
+}
+h1,
+h2 {
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+button {
+  -moz-osx-font-smoothing: inherit;
+  -webkit-font-smoothing: inherit;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+input[type="text"] {
+  border-radius: 0;
+}
+body {
+  background-color: #f5f5f5;
+  color: #4d4d4d;
+  font:
+    1.6rem/1.25 Arial,
+    sans-serif;
+  margin: 0 auto;
+  max-width: 68rem;
+  width: 100%;
+}
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 1.9rem;
+    line-height: 1.31579;
+  }
+}
+/* End resets */
+/* Global styles */
+
+/* Media queries: applying CSS rules to different screen (width, height, resolution and orientation). For creating a responsive design that adapts to screen sizes and devices.  */
+/* The background color of the body changes to light green when the viewport width is 600px or less.
+@media (max-width: 620px){
+  body {
+    background-color: lightgreen;
+  }
+} */
+
+/* Psuedo-classes: keywords added to selectors that specify a special state of the selected elements. Styling elements based on user interactions.  */
+
+/* Style for links when hovered over
+a:hover {
+  color: red;
+} */
